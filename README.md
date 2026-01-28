@@ -54,8 +54,6 @@ Key data areas:
 ✔ Suitable for HR analytics and behavioral analysis
 
 🧾 Attribute Details (Data Dictionary)
-
-🧾 Attribute Details (Data Dictionary)
 ________________________________________
 🔹 Employee Details Table
 Attribute Name	Data Type	Description
