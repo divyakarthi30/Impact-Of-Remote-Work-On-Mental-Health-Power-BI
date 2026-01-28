@@ -27,6 +27,8 @@ ________________________________________
 5.	Evaluate lifestyle factors such as sleep quality and physical activity
 6.	Understand social isolation and work-life balance trends
 ________________________________________
+
+
 ❓ Problem Statement
 •	How does remote work affect employee mental health?
 •	Which job roles show higher stress and burnout risk?
@@ -34,6 +36,13 @@ ________________________________________
 •	How do sleep quality and physical activity influence stress levels?
 •	Which work model shows better work-life balance?
 ________________________________________
+
+
+
+
+
+
+
 📂 Dataset Description
 The dataset contains employee-level information related to demographics, work environment, and mental health indicators.
 Key data areas:
@@ -43,30 +52,52 @@ Key data areas:
 •	Lifestyle attributes
 ✔ Mix of numerical and categorical data
 ✔ Suitable for HR analytics and behavioral analysis
+
+🧾 Attribute Details (Data Dictionary)
+________________________________________
+🔹 Employee Details Table
+Attribute Name	Data Type	Description
+Employee ID	Text	Unique identifier for each employee
+Age	Whole Number	Age of the employee
+Age Group	Text	Categorized age range (e.g., 20–29, 30–39, 40–49, 50+)
+Gender	Text	Gender of the employee
+Region	Text	Geographical region of the employee
+Job Role	Text	Job designation of the employee
+Experience Level	Text	Junior / Mid / Senior / Expert
+________________________________________
+🔹 Work Details Table
+Attribute Name	Data Type	Description
+Employee ID	Text	Unique identifier (Primary Key)
+Work Location	Text	Remote / Hybrid / Onsite
+Working Hours Per Week	Whole Number	Total working hours per week
+Overtime Hours	Whole Number	Extra working hours beyond standard time
+Work Life Balance Score	Decimal Number	Self-reported work-life balance rating
+Physically Active	Whole Number	Indicates if employee is physically active (1 = Yes, 0 = No)
+Sleep Quality	Text	Poor / Average / Good
 ________________________________________
 
 
-🧾 Attribute Details
-Attribute Name	Description
-Employee ID	Unique identifier for each employee
-Age	Age of employee
-Age Group	Categorized age range
-Gender	Gender of employee
-Job Role	Employee’s designation
-Region	Work region
-Work Location	Remote / Hybrid / Onsite
-Working Hours	Hours worked per week
-Stress Level	Low / Medium / High
-Stress Score	Numerical stress representation
-Mental Health Condition	Anxiety, Burnout, Depression, None
-Sleep Quality	Poor / Average / Good
-Physical Activity	Yes / No
-Work-Life Balance Score	Satisfaction score
-Social Isolation Score	Level of isolation
-Productivity Change	Increase / No change / Decrease
-Company Support	Mental health support availability
-________________________________________
 
+
+🔹 Mental Health Table
+Attribute Name	Data Type	Description
+Employee ID	Text	Unique identifier (Foreign Key)
+Stress Score	Decimal Number	Stress level score of the employee
+Stress Level	Text	Low / Medium / High
+Anxiety	Whole Number	Indicates anxiety condition (1 = Yes, 0 = No)
+Burnout	Whole Number	Indicates burnout condition (1 = Yes, 0 = No)
+Depression	Whole Number	Indicates depression condition (1 = Yes, 0 = No)
+Social Isolation Score	Decimal Number	Level of social isolation
+Mental Health Condition	Text	Anxiety / Burnout / Depression / None
+
+		
+		
+		
+		
+		
+		
+		
+		
 
 
 🧹 Data Preprocessing Steps
@@ -91,8 +122,7 @@ ________________________________________
 •	Average Working Hours
 •	Average Work-Life Balance
 •	Overworked Employees
-•	Physically Active Employees
-________________________________________
+•	Physically Active Employee________________________________________
 📉 Analysis & Visualizations
 Developed an interactive Power BI dashboard using:
 •	KPI Cards
@@ -123,8 +153,19 @@ This project demonstrates how Power BI and Excel can be used to analyze workplac
 The analysis shows that working hours, sleep quality, job role, and work model significantly influence stress and well-being. Organizations can use this dashboard to design better mental health policies, workload planning, and employee support programs.
 ________________________________________
 🖼 Dashboard Preview
-(Insert your Power BI dashboard screenshots here)
+Mental Helath DashBoard Overview
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/2a6f7fae-84a1-4ca6-b2ab-5e8ae01032bb" />
+
+ 
 ________________________________________
+
+
+
+
+Strees Analysis DashBoard
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b273eb6d-1bab-411c-a331-a830a3af7445" />
+
+ 
 👩‍💻 Author
 Dhivya
 Aspiring Data Analyst
