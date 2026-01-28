@@ -55,6 +55,40 @@ Key data areas:
 
 🧾 Attribute Details (Data Dictionary)
 
+🧾 Attribute Details (Data Dictionary)
+________________________________________
+🔹 Employee Details Table
+Attribute Name	Data Type	Description
+Employee ID	Text	Unique identifier for each employee
+Age	Whole Number	Age of the employee
+Age Group	Text	Categorized age range (20–29, 30–39, 40–49, 50+)
+Gender	Text	Gender of the employee
+Region	Text	Geographical region of the employee
+Job Role	Text	Job designation of the employee
+Experience Level	Text	Junior / Mid / Senior / Expert
+________________________________________
+🔹 Work Details Table
+Attribute Name	Data Type	Description
+Employee ID	Text	Unique identifier (Primary Key)
+Work Location	Text	Remote / Hybrid / Onsite
+Working Hours Per Week	Whole Number	Total working hours per week
+Overtime Hours	Whole Number	Extra working hours beyond standard time
+Work Life Balance Score	Decimal Number	Employee-rated work–life balance
+Physically Active	Whole Number	1 = Yes, 0 = No
+Sleep Quality	Text	Poor / Average / Good
+________________________________________
+🔹 Mental Health Table
+Attribute Name	Data Type	Description
+Employee ID	Text	Unique identifier (Foreign Key)
+Stress Score	Decimal Number	Stress level score
+Stress Level	Text	Low / Medium / High
+Anxiety	Whole Number	1 = Yes, 0 = No
+Burnout	Whole Number	1 = Yes, 0 = No
+Depression	Whole Number	1 = Yes, 0 = No
+Social Isolation Score	Decimal Number	Level of social isolation
+Mental Health Condition	Text	Anxiety / Burnout / Depression / None
+		
+		
 
 		
 		
