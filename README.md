@@ -1,172 +1,211 @@
 
-________________________________________
-📊 Impact of Remote Work on Mental Health (2023–2025)
-Tools: Power BI | Excel | Power Query | DAX | Data Modeling
-Domain: HR Analytics | Workplace Well-Being | Mental Health
-________________________________________
-🧩 Project Overview
-This project analyzes how remote, hybrid, and onsite work models impact employee mental health, stress levels, productivity, and work-life balance.
+# 📊 Impact of Remote Work on Mental Health (2023–2025)
+
+> **Tools:** Power BI | Excel | Power Query | DAX | Data Modeling  
+> **Domain:** HR Analytics | Workplace Well-Being |Mental Helath |**Language:** DAX  
+>   
+
+![Power BI](https://img.shields.io/badge/Tool-Power%20BI-yellow)
+![Excel](https://img.shields.io/badge/Tool-Excel-green)
+![Domain-HR](https://img.shields.io/badge/Domain-HR%20Analytics-blue)
+![Language-DAX](https://img.shields.io/badge/Language-DAX-orange)
+
+
+📌 Project Overview
+
+This project analyzes how remote, hybrid, and onsite work models impact employee mental health, stress levels, working hours, and work-life balance.
+
 Using Power BI, the dataset was cleaned, transformed, modeled, and visualized to uncover key patterns related to:
-•	Stress levels
-•	Burnout risk
-•	Mental health conditions
-•	Working hours
-•	Sleep quality
-•	Social isolation
-•	Work-life balance
-The objective is to support data-driven HR decisions and improve employee well-being strategies.
-________________________________________
 
+Stress and burnout risk
 
+Mental health conditions
+
+Working hours impact
+
+Sleep quality and physical activity
+
+Social isolation and work-life balance
+
+🎯 Goal: To support data-driven HR decisions and improve employee well-being strategies.
 
 🎯 Project Objectives
-1.	Analyze overall employee stress patterns
-2.	Compare mental health conditions across work locations
-3.	Identify high-stress job roles
-4.	Study the relationship between working hours and stress
-5.	Evaluate lifestyle factors such as sleep quality and physical activity
-6.	Understand social isolation and work-life balance trends
-________________________________________
 
+Analyze overall employee stress patterns
+
+Compare mental health conditions across work locations
+
+Identify high-stress job roles
+
+Study the relationship between working hours and stress
+
+Evaluate lifestyle factors such as sleep quality and physical activity
+
+Understand social isolation and work-life balance trends
 
 ❓ Problem Statement
-•	How does remote work affect employee mental health?
-•	Which job roles show higher stress and burnout risk?
-•	Is there a relationship between long working hours and stress?
-•	How do sleep quality and physical activity influence stress levels?
-•	Which work model shows better work-life balance?
-________________________________________
 
+How does remote work affect employee mental health?
 
+Which job roles show higher stress and burnout risk?
 
+Is there a relationship between long working hours and stress?
 
+How do sleep quality and physical activity influence stress levels?
 
-
+Which work model shows better work-life balance?
 
 📂 Dataset Description
-The dataset contains employee-level information related to demographics, work environment, and mental health indicators.
-Key data areas:
-•	Employee demographics
-•	Work details
-•	Mental health indicators
-•	Lifestyle attributes
+
+The dataset contains employee-level information related to:
+
+Employee demographics
+
+Work environment details
+
+Mental health indicators
+
+Lifestyle attributes
+
 ✔ Mix of numerical and categorical data
 ✔ Suitable for HR analytics and behavioral analysis
 
 🧾 Attribute Details (Data Dictionary)
-________________________________________
-🔹 Employee Details Table
-Attribute Name	Data Type	Description
-Employee ID	Text	Unique identifier for each employee
-Age	Whole Number	Age of the employee
-Age Group	Text	Categorized age range (20–29, 30–39, 40–49, 50+)
-Gender	Text	Gender of the employee
-Region	Text	Geographical region of the employee
-Job Role	Text	Job designation of the employee
-Experience Level	Text	Junior / Mid / Senior / Expert
-________________________________________
-🔹 Work Details Table
-Attribute Name	Data Type	Description
-Employee ID	Text	Unique identifier (Primary Key)
-Work Location	Text	Remote / Hybrid / Onsite
-Working Hours Per Week	Whole Number	Total working hours per week
-Overtime Hours	Whole Number	Extra working hours beyond standard time
-Work Life Balance Score	Decimal Number	Employee-rated work–life balance
-Physically Active	Whole Number	1 = Yes, 0 = No
-Sleep Quality	Text	Poor / Average / Good
-________________________________________
-🔹 Mental Health Table
-Attribute Name	Data Type	Description
-Employee ID	Text	Unique identifier (Foreign Key)
-Stress Score	Decimal Number	Stress level score
-Stress Level	Text	Low / Medium / High
-Anxiety	Whole Number	1 = Yes, 0 = No
-Burnout	Whole Number	1 = Yes, 0 = No
-Depression	Whole Number	1 = Yes, 0 = No
-Social Isolation Score	Decimal Number	Level of social isolation
-Mental Health Condition	Text	Anxiety / Burnout / Depression / None
-		
-		
+| Attribute Name           | Data Type        | Description |
+|--------------------------|------------------|-------------|
+| Employee ID              | Text             | Unique identifier for each employee |
+| Age                      | Whole Number     | Age of the employee |
+| Age Group                | Text             | Categorized age range (20–29, 30–39, 40–49, 50+) |
+| Gender                   | Text             | Gender of the employee |
+| Region                   | Text             | Geographical region |
+| Job Role                 | Text             | Job designation |
+| Experience Level         | Text             | Junior / Mid / Senior / Expert |
+| Work Location            | Text             | Remote / Hybrid / Onsite |
+| Working Hours Per Week   | Whole Number     | Weekly working hours |
+| Overtime Hours           | Whole Number     | Extra working hours |
+| Work Life Balance Score  | Decimal Number   | Work-life balance rating |
+| Physically Active        | Whole Number     | 1 = Yes, 0 = No |
+| Sleep Quality            | Text             | Poor / Average / Good |
+| Stress Score             | Decimal Number   | Stress level score |
+| Stress Level             | Text             | Low / Medium / High |
+| Anxiety                  | Whole Number     | 1 = Yes, 0 = No |
+| Burnout                  | Whole Number     | 1 = Yes, 0 = No |
+| Depression               | Whole Number     | 1 = Yes, 0 = No |
+| Social Isolation Score   | Decimal Number   | Isolation measurement |
+| Mental Health Condition  | Text             | Anxiety / Burnout / Depression / None |
 
-		
-		
-		
-		
-		
+🧹 Data Preprocessing
 
+Performed using Excel & Power Query:
 
-🧹 Data Preprocessing Steps
-1.	Data collection from Excel source
-2.	Removed duplicates and empty records
-3.	Standardized categorical values
-4.	Corrected data types
-5.	Created conditional columns (Stress score, Age group)
-6.	Built fact and dimension tables
-7.	Established relationships using Employee ID
-________________________________________
+Removed duplicates and blank values
+
+Corrected data types
+
+Standardized categorical values
+
+Created Age Group and Stress Level columns
+
+Built fact and dimension tables
+
+Established relationships using Employee ID
+
 📐 Data Modeling
-•	Star-schema design
-•	Dimension Table → Employee Details
-•	Fact Table → Mental Health Metrics
-•	One-to-many relationship on Employee ID
-________________________________________
+
+Star schema design
+
+Dimension table: Employee Details
+
+Fact table: Work & Mental Health metrics
+
+One-to-many relationship on Employee ID
+
 🧮 DAX Measures Created
-•	Total Employees
-•	Average Stress Score
-•	High Stress %
-•	Average Working Hours
-•	Average Work-Life Balance
-•	Overworked Employees
-•	Physically Active Employee________________________________________
-📉 Analysis & Visualizations
-Developed an interactive Power BI dashboard using:
-•	KPI Cards
-•	Stacked Bar Charts
-•	Donut Charts
-•	Line Charts
-•	Scatter Plot
-•	Pie Charts
-•	Slicers
-Dashboard covers:
-•	Mental health by work location
-•	Stress distribution
-•	Stress vs sleep quality
-•	Work hours vs stress
-•	Job role vs stress
-•	Age-wise stress trends
-________________________________________
-📈 Performance Insights
-•	🔥 Higher working hours strongly relate to increased stress
-•	💤 Poor sleep quality shows higher stress levels
-•	🏢 Certain job roles consistently show high burnout risk
-•	🏠 Remote work shows increased social isolation patterns
-•	⚖ Hybrid work model reflects more balanced outcomes
-•	📊 Younger and mid-age employees show fluctuating stress trends
-________________________________________
+
+Total Employees
+
+Average Stress Score
+
+High Stress %
+
+Average Working Hours
+
+Average Work-Life Balance
+
+Overworked Employees
+
+Physically Active Employees
+
+📊 Dashboard & Visualizations
+
+Interactive Power BI dashboard includes:
+
+KPI Cards – overall mental health indicators
+
+100% stacked bar – mental health by work location
+
+Line chart – stress trend by age
+
+Bar chart – high stress % by job role
+
+Scatter plot – working hours vs stress
+
+Donut & pie charts – stress and experience distribution
+
+Slicers – gender, age group, job role, work location
+
+🔍 Key Insights
+
+🔥 Long working hours strongly relate to increased stress
+
+💤 Poor sleep quality shows higher stress levels
+
+🏢 Certain job roles show consistent burnout risk
+
+🏠 Remote employees show higher social isolation patterns
+
+⚖ Hybrid work reflects more balanced outcomes
+
+📊 Younger and mid-age employees show fluctuating stress trends
+
 🧠 Conclusion
-This project demonstrates how Power BI and Excel can be used to analyze workplace mental health data and convert raw employee information into actionable HR insights.
-The analysis shows that working hours, sleep quality, job role, and work model significantly influence stress and well-being. Organizations can use this dashboard to design better mental health policies, workload planning, and employee support programs.
-________________________________________
+
+This project demonstrates how Power BI and Excel can transform raw HR data into meaningful mental health insights.
+The analysis highlights that working hours, job role, sleep quality, and work model significantly influence employee well-being.
+
+Organizations can use this dashboard to design better:
+
+Mental health programs
+
+Workload planning
+
+Employee engagement strategies
+
 🖼 Dashboard Preview
+
 Mental Helath DashBoard Overview
-<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/2a6f7fae-84a1-4ca6-b2ab-5e8ae01032bb" />
 
- 
-________________________________________
-
-
-
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1268e44f-5455-4600-98bc-851a592eeeb0" />
 
 Strees Analysis DashBoard
-<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b273eb6d-1bab-411c-a331-a830a3af7445" />
 
- 
-👩‍💻 Author
-Dhivya
-Aspiring Data Analyst
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/325f3abb-f0c7-4bb7-8831-41bb484597e6" />
+
+
+ 👩‍💻 Author
+
+Dhivya Karthikeyan
+Aspiring Data Analyst | Power BI Developer
+
+🌐 GitHub: https://github.com/divyakarthi30
+
+💼 LinkedIn: https://www.linkedin.com/in/dhivya-karthikeyan-b8b883393
+
+📧 Email: divyadevicse@gmail.com
+
 Skills: Power BI | Excel | DAX | Power Query | Data Visualization | HR Analytics
-________________________________________
+
 📚 Tags
+
 #PowerBI #HRAnalytics #MentalHealthAnalytics #DataAnalysis
 #DashboardDesign #DAX #PowerQuery #DataVisualization
-
